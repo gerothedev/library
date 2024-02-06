@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="focus-on-book hide">
+            <div>
+            </div>
+            <div>
+                <div>
+                    <p>Title</p>
+                    <p></p>
+                </div>
+                <div>
+                    <p>Author</p>
+                    <p></p>
+                </div>
+                <div>
+                    <p>Genre</p>
+                    <p></p>
+                </div>
+                <div>
+                    <p>Page Count</p>
+                    <p></p>
+                </div>
+                <div>
+                    <p>Did you read this book?</p>
+                    <input type="checkbox" name="read" id="read-status" placeholder="Did you read this book">
+                        <label for="read-status">
+                            <div>
+                                <p>NO</p>
+                            </div>
+                            <div></div>
+                            <div>
+                                <p>YES</p>
+                            </div>
+                        </label>
+                </div>
+            </div>
+            <div>
+                <button type="button" class="delete-book">Delete</button>
+            </div>
+            <div>
+                <div class="close-book-info"><p>Close</p></div>
+            </div>
+        </div>
+        <header>
+            <div>
+                <p>Virtual Library</p>
+            </div>
+            <button type="button" class="add-book">Add Book</button>
+        </header>
+        <dialog>
+            <form method="dialog">
+                <div>
+                    <div>
+                        <label for="title-input">Title</label>
+                        <input type="text" name="title" id="title-input" placeholder="Title">
+                    </div>
+                    <div>
+                        <label for="author-input">Author</label>
+                        <input type="text" name="author" id="author-input" placeholder="Author">
+                    </div>
+                    <div>
+                        <label for="genre-input">Genre</label>
+                        <input type="text" name="genre" id="genre-input" placeholder="Genre">
+                    </div>
+                    <div>
+                        <label for="page-input">Page Count</label>
+                        <input type="number" name="page-count" id="page-input" placeholder="Page Count" min="1">
+                    </div>
+                    <div>
+                        <label for="book-cover-input">Book Cover URL</label>
+                        <input type="text" name="book-cover" id="book-cover-input" placeholder="Add a URL for a book cover">
+                    </div>
+                    <div>
+                        <label>Did you read this book?</label>
+                        <input type="checkbox" name="read" id="read-input" placeholder="Did you read this book">
+                        <label for="read-input">
+                            <div>
+                                <p>NO</p>
+                            </div>
+                            <div></div>
+                            <div>
+                                <p>YES</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <button id="add-book-button">Add Book</button>
+            </form>
+        </dialog>
+        <main>
+        </main>
+        <footer></footer>
+        <script src="main.js"></script>
+    </body>
+</html>

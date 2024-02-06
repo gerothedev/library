@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.focus-on-book {
+    background-color: rgb(0 0 0 / 0.75);
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.focus-on-book > div:nth-child(1) {
+    width: 300px;
+    position: relative;
+}
+
+.focus-on-book > div:nth-child(1) > div {
+    background-color: gray;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    padding: 10px;
+    text-align: center;
+}
+
+.focus-on-book > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 30px;
+}
+
+.focus-on-book > div:nth-child(2) > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.focus-on-book > div:nth-child(2) > div > p {
+    font-size: 24px;
+}
+
+.focus-on-book > div:nth-child(2) > div > p + p {
+    font-size: 32px;
+}
+
+.focus-on-book > div:nth-child(3) {
+    position: absolute;
+    top: 50px;
+}
+
+.focus-on-book > div:nth-child(4) {
+    position: absolute;
+    bottom: 50px;
+}
+
+.close-book-info {
+    border: 2px solid;
+    border-radius: 0.375rem;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-book {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 0.375rem;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-book-info:hover, .delete-book:hover {
+    border-color: red;
+    color: red;
+    cursor: pointer;
+}
+
+header {
+    background: url(images/dark-wood-border.jpg) center / cover;
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header > div > p {
+    font-family: 'Great Vibes', 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 32px;
+}
+
+.add-book {
+    border: 3px solid #3f291e;
+    border-radius: 0.375rem;
+    background-color: #634231;
+    font-size: 18px;
+    color: white;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.add-book:active {
+    background-color: #533729;
+}
+
+#add-book-button {
+    border-radius: 0.375rem;
+}
+
+dialog {
+    background-image: url(images/dark-wood-border.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    border: none;
+    border-radius: 0.375rem;
+    padding: 20px;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+
+    button {
+        width: 100%;
+        height: 48px;
+    }
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form > div > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-size: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    height: 48px;
+    width: 100%;
+    background-color: rgb(0 0 0 / 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 0.375rem;
+    z-index: 0;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+input::placeholder {
+    color: white;
+    z-index: 0;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 0.75);
+}
+
+main {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(images/dark-wood-background.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+    background-color: rgb(78, 35, 35);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+section p {
+    font-size: 48px;
+    color: white;
+}
+
+label[data-position] {
+    background-color: gray;
+    width: 250px;
+    min-height: 360px;
+    position: absolute;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: white;
+    text-align: center;
+}
+
+label[data-position] > div {
+    width: 100%;
+    height: auto;
+}
+
+label[for="read-input"], label[for="read-status"] {
+    height: 48px;
+    width: 120px;
+    background: black;
+    border-radius: 1000px;
+    position: relative;
+    transition: 0.2s ease-in;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+label[for="read-input"] > div:nth-child(1), label[for="read-status"] > div:nth-child(1) {
+    background: red;
+    height: 48px;
+    width: 120px;
+    border-radius: 1000px;
+    position: absolute;
+    right: 0px;
+    transition: 0.2s ease-in;
+    z-index: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 24px;
+    padding: 0px 15px;
+}
+
+label[for="read-input"] > div:nth-child(2), label[for="read-status"] > div:nth-child(2) {
+    background: white;
+    height: 48px;
+    width: 50px;
+    border-radius: 1000px;
+    position: absolute;
+    left: 0;
+    transition: 0.2s ease-in;
+    z-index: 3;
+}
+
+label[for="read-input"] > div:nth-child(3), label[for="read-status"] > div:nth-child(3) {
+    background: green;
+    height: 48px;
+    width: 120px;
+    border-radius: 1000px;
+    position: absolute;
+    left : -68%;
+    transition: 0.2s ease-in;
+    z-index: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 24px;
+    padding: 0px 15px;
+}
+
+input[type="checkbox"]:checked ~ label[for="read-input"] > div:nth-child(1),
+input[type="checkbox"]:checked ~ label[for="read-status"] > div:nth-child(1) {
+    right : -68%;
+}
+
+input[type="checkbox"]:checked ~ label[for="read-input"] > div:nth-child(2),
+input[type="checkbox"]:checked ~ label[for="read-status"] > div:nth-child(2) {
+    left : 70px;
+}
+
+input[type="checkbox"]:checked ~ label[for="read-input"] > div:nth-child(3),
+input[type="checkbox"]:checked ~ label[for="read-status"] > div:nth-child(3) {
+    left : 0px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background: url(images/dark-wood-border.jpg) center / cover;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    width: 100%;
+    height: 100px;
+    background-color: burlywood;
+    padding: 0 10%;
+}
+
+footer > div {
+    display: grid;
+    grid-template: auto 1fr / 1fr
+}
+
+footer > div > p:first-child {
+    font-size: 24px;
+}
+
+footer > div > p + p {
+    justify-self: center;
+    align-self: center;
+}
+
+.hide {
+    display: none;
+}
+
+@media only screen and (max-width: 719px)  {
+    .focus-on-book {
+        flex-direction: column;
+        justify-content: unset;
+        overflow: auto;
+        padding: 30px 25px;
+    }
+
+    .focus-on-book > div:nth-child(2) {
+        width: unset;
+        max-width: 520;
+        min-width: 300px;
+    }
+
+    .focus-on-book > div:nth-child(3) {
+        position: unset;
+        top: 0;
+    }
+    
+    .focus-on-book > div:nth-child(4) {
+        position: unset;
+        bottom: 0;
+    }
+}
